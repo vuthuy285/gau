@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %} {{name}} {% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between;">
+    <h2>Welcome {{name}}</h2>
+    <form action="/logout" method="post">
+        <button style="background-color: pink; color: white; margin: 10px;" type ="submit">Logout</button>    
+    </form>
+</div>
+
+<h4>
+    <a href="/select">>>Xem thông tin users</a><br>
+    <a href="/find">>>Tìm user</a>
+</h4>
+
+
+<!-- <form action="/select" method="get">
+    <button style="background-color: pink; color: white; margin: 10px;" type ="submit">Xem tat ca user</button>    
+</form> -->
+{% endblock %}
